@@ -11,8 +11,8 @@ const createWindow = () => {
     win.webContents.openDevTools();
 }
 
-
-app.whenReady().then(() => {
+// https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-first-app
+app.on('ready', () => {
     createWindow()
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {

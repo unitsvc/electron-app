@@ -4,12 +4,14 @@
   "description": "Hello World!",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "nodemon --exec electron ."
   },
   "author": "unitsvc",
   "license": "GPLv3",
   "devDependencies": {
-    "electron": "^35.2.0"
+    "electron": "^35.2.0",
+    "nodemon": "^3.1.9"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
