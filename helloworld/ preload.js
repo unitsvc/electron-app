@@ -11,3 +11,7 @@ contextBridge.exposeInMainWorld('versions', {
         ipcRenderer.send('api/send', data)
     }
 })
+
+ipcRenderer.on('api/send', (event, arg) => {
+    console.log('api/send', arg);
+});
