@@ -7,7 +7,7 @@ const createWindow = () => {
         autoHideMenuBar: true,
         alwaysOnTop: true,
     })
-    win.loadFile('index.html')
+    win.loadFile('pages/index.html')
     win.webContents.openDevTools();
 }
 
