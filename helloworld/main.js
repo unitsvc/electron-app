@@ -13,6 +13,7 @@ const createWindow = () => {
 
 // https://www.electronjs.org/zh/docs/latest/tutorial/tutorial-first-app
 app.on('ready', () => {
+    console.log(__dirname)
     createWindow()
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
