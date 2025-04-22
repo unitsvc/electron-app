@@ -13,6 +13,9 @@ const createWindow = () => {
             preload: path.resolve(__dirname, './ preload.js')
         }
     })
+    ipcMain.on('api/send', (e, data) => {
+        console.log(e.processId, data)
+    })
     win.loadFile('pages/index.html')
     win.webContents.openDevTools();
 }
