@@ -5,12 +5,41 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "nodemon --exec electron ."
+    "dev": "nodemon --exec electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.unitsvc.helloworld",
+    "win": {
+      "icon": "./icon.svg",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "icon": "./icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "author": "unitsvc",
   "license": "GPLv3",
   "devDependencies": {
     "electron": "^35.2.0",
+    "electron-builder": "^26.0.12",
     "nodemon": "^3.1.9"
   },
   "pnpm": {
